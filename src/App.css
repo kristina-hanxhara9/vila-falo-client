@@ -1,0 +1,487 @@
+/* Import base styles provided */
+@import url('base-styles.css');
+
+/* ======== Modal Fixes ======== */
+.modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 32rem;
+  max-height: 90vh;
+  margin: auto;
+  overflow-y: auto;
+  position: relative;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ensure modals have proper spacing */
+.modal-content .px-6 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.modal-content .py-6 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.modal-content .p-6 {
+  padding: 1.5rem !important;
+}
+
+/* ======== Button Text Visibility Fixes ======== */
+/* Add text-shadow to buttons with light text */
+.btn-text-contrast {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 500 !important;
+}
+
+/* Fix specific button types */
+.bg-blue-600, 
+.bg-green-600, 
+.bg-red-600,
+.bg-yellow-600,
+.bg-purple-600,
+.bg-primary,
+.bg-success,
+.bg-danger,
+.bg-warning,
+.bg-info {
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+}
+
+.bg-blue-600:hover, 
+.bg-green-600:hover, 
+.bg-red-600:hover,
+.bg-yellow-600:hover,
+.bg-purple-600:hover {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Header and gradient background text contrast fixes */
+.bg-gradient-to-r {
+  color: white !important;
+}
+
+.bg-gradient-to-r .text-blue-100,
+.bg-gradient-to-r .text-white {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ======== Form Control Improvements ======== */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #374151;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #93c5fd;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* Label styling */
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* ======== Button Improvements ======== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background-color: #3b82f6; /* blue-500 */
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #2563eb; /* blue-600 */
+}
+
+.btn-success {
+  background-color: #10b981; /* green-500 */
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-success:hover {
+  background-color: #059669; /* green-600 */
+}
+
+.btn-danger {
+  background-color: #ef4444; /* red-500 */
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-danger:hover {
+  background-color: #dc2626; /* red-600 */
+}
+
+.btn-secondary {
+  background-color: #9ca3af; /* gray-400 */
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:hover {
+  background-color: #6b7280; /* gray-500 */
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.btn-outline:hover {
+  background-color: #f3f4f6;
+}
+
+/* ======== Confirmation Modal Styling ======== */
+.confirm-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.confirm-modal-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  max-width: 28rem;
+  padding: 1.5rem;
+  animation: confirmModalFade 0.2s ease-out;
+}
+
+@keyframes confirmModalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.confirm-modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.confirm-modal-message {
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+}
+
+.confirm-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* ======== General UI Improvements ======== */
+/* Cards with better shadows and hover effects */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* High contrast alert messages */
+.alert-danger {
+  background-color: #fef2f2;
+  border-left: 4px solid #ef4444;
+  color: #991b1b;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+}
+
+.alert-success {
+  background-color: #f0fdf4;
+  border-left: 4px solid #10b981;
+  color: #065f46;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+}
+
+/* Loading spinner with better visibility */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 0.25rem solid rgba(59, 130, 246, 0.2);
+  border-top-color: #3b82f6;
+  animation: spin 1s linear infinite;
+}
+
+/* Text visibility/contrast utility classes */
+.text-contrast-dark {
+  color: #1f2937;
+}
+
+.text-contrast-medium {
+  color: #4b5563;
+}
+
+.text-contrast-light {
+  color: #6b7280;
+}
+
+/* Gradient backgrounds with better contrast */
+.bg-gradient-blue {
+  background-image: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+}
+
+.bg-gradient-green {
+  background-image: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+/* Status indicators with better visibility */
+.status-dot {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.status-dot-success {
+  background-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.status-dot-warning {
+  background-color: #f59e0b;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+.status-dot-danger {
+  background-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+/* Badge text contrast */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.badge-warning {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.badge-danger {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-primary {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+/* Table cells with better contrast */
+.table-cell-highlight {
+  background-color: #f3f4f6;
+}
+
+/* ======== Responsive Fixes ======== */
+/* Ensure modals are usable on small screens */
+@media (max-width: 640px) {
+  .modal-content {
+    max-width: 90%;
+  }
+  
+  /* Make buttons more touch-friendly on mobile */
+  .btn {
+    padding: 0.625rem 1rem;
+  }
+  
+  /* Adjust form controls for touch */
+  .form-control {
+    padding: 0.625rem 0.75rem;
+  }
+}
+
+/* Apply this class to buttons with white text to improve visibility */
+.text-shadow {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Fix specific gradients for better contrast */
+.from-blue-600.to-blue-800 {
+  background-image: linear-gradient(to right, #2563eb, #1e40af) !important;
+  color: white !important;
+}
+/* Simple fixes for App.css issues */
+
+/* Fix form backgrounds - make them light gray instead of white */
+input, 
+textarea, 
+select, 
+.form-control {
+  background-color: #f9fafb !important; /* Very light gray */
+  border: 1px solid #e5e7eb !important;
+  color: #1f2937 !important; /* Dark gray, almost black */
+}
+
+/* Ensure text in forms is black/dark gray */
+input, 
+textarea, 
+select, 
+.form-control, 
+form label, 
+form .text-gray-700, 
+form .text-gray-600, 
+form .text-gray-500 {
+  color: #1f2937 !important; /* Dark gray, almost black */
+}
+
+/* Fix form focus styles */
+input:focus, 
+textarea:focus, 
+select:focus, 
+.form-control:focus {
+  border-color: #3b82f6 !important; /* blue-500 */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+  outline: none !important;
+}
+
+/* Fix menu card white backgrounds */
+a.bg-white.rounded-xl,
+a.bg-white.shadow-md,
+a[class*="bg-white"][href*="/manager/"],
+a[class*="bg-white"][href*="/waiter/"] {
+  background-color: #f3f4f6 !important; /* Gray-100 */
+}
+
+/* Fix card backgrounds for specific pages */
+a[href="/manager/tables"] {
+  background-color: #d1fae5 !important; /* Light green */
+}
+
+a[href="/manager/menu"] {
+  background-color: #dbeafe !important; /* Light blue */
+}
+
+a[href="/logout"] {
+  background-color: #fee2e2 !important; /* Light red */
+}
+
+/* Fix button colors for buttons without the btn class */
+.px-3.py-1.bg-blue-600,
+.px-3.py-1.bg-blue-500 {
+  background-color: #3b82f6 !important;
+  color: white !important;
+}
+
+.px-3.py-1.bg-green-600,
+.px-3.py-1.bg-green-500 {
+  background-color: #10b981 !important;
+  color: white !important;
+}
+
+.px-3.py-1.bg-red-600,
+.px-3.py-1.bg-red-500 {
+  background-color: #ef4444 !important;
+  color: white !important;
+}
+
+/* Make specific text black */
+.text-gray-800,
+.text-gray-900,
+.font-semibold,
+.font-bold {
+  color: #111827 !important; /* Near black */
+}
+
+.text-gray-700,
+.text-gray-600 {
+  color: #374151 !important; /* Dark gray */
+}

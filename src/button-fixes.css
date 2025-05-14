@@ -1,0 +1,105 @@
+/* ===== BUTTON & FORM FIXES ===== */
+
+/* Button color fixes */
+.btn,
+.px-3.py-1.bg-blue-600,
+.px-3.py-1.bg-green-600,
+.px-3.py-1.bg-red-600,
+a[class*="bg-blue-"],
+a[class*="bg-green-"],
+a[class*="bg-red-"] {
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  font-weight: 500 !important;
+}
+
+/* Primary button colors */
+.btn-primary,
+.bg-blue-600,
+.bg-blue-500 {
+  background-color: #3b82f6 !important;
+}
+
+/* Success button colors */
+.btn-success,
+.bg-green-600,
+.bg-green-500 {
+  background-color: #10b981 !important;
+}
+
+/* Danger button colors */
+.btn-danger,
+.bg-red-600,
+.bg-red-500 {
+  background-color: #ef4444 !important;
+}
+
+/* Status indicators */
+.bg-green-100 { background-color: #d1fae5 !important; }
+.text-green-800 { color: #065f46 !important; }
+
+.bg-red-100 { background-color: #fee2e2 !important; }
+.text-red-800 { color: #991b1b !important; }
+
+.bg-yellow-100 { background-color: #fef3c7 !important; }
+.text-yellow-800 { color: #92400e !important; }
+
+.bg-blue-100 { background-color: #dbeafe !important; }
+.text-blue-800 { color: #1e40af !important; }
+
+/* Fix menu card backgrounds */
+a.bg-white,
+a[href="/manager/tables"] {
+  background-color: #d1fae5 !important; /* Light green */
+}
+
+a[href="/manager/menu"] {
+  background-color: #dbeafe !important; /* Light blue */
+}
+
+a[href="/logout"] {
+  background-color: #fee2e2 !important; /* Light red */
+}
+
+/* Form control improvements */
+input, 
+textarea, 
+select, 
+.form-control {
+  background-color: #f9fafb !important; /* Very light gray */
+  border: 1px solid #e5e7eb !important;
+  color: #1f2937 !important; /* Dark gray, almost black */
+}
+
+/* Make sure form labels and text are dark */
+form label,
+.form-label,
+form .text-gray-700,
+form .text-gray-600,
+form .text-gray-500 {
+  color: #374151 !important; /* Dark gray */
+}
+
+/* Text colors for various elements */
+.text-gray-800,
+.text-gray-900,
+.font-semibold,
+.font-bold {
+  color: #111827 !important; /* Near black */
+}
+
+.text-gray-700,
+.text-gray-600 {
+  color: #374151 !important; /* Dark gray */
+}
+
+/* Make sure all tables have proper text contrast */
+table th,
+table td {
+  color: #1f2937 !important;
+}
+
+/* Override any white backgrounds with light gray */
+.bg-white {
+  background-color: #f9fafb !important;
+}
